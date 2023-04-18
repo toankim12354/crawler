@@ -1,0 +1,20 @@
+{
+    "name": "toanlt/crawler",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Toanlt\\Crawler\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "toanlt"
+        }
+    ],
+    "require": {
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-pdo": "*"
+    }
+}
