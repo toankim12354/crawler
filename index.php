@@ -7,9 +7,9 @@ use Toanlt\Crawler\Router;
 require_once __DIR__ . '/vendor/autoload.php';
 
 const DB_HOST = 'localhost';
-const DB_NAME = 'crawler';
-const DB_USERNAME = 'sammy';
-const DB_PASSWORD = 'Toanlt@123';
+const DB_NAME = 'Parser';
+const DB_USERNAME = 'toanlt';
+const DB_PASSWORD = 'Toanlt123';
 const BASE_PATH = __DIR__;
 const VIEW_PATH = BASE_PATH . '/views';
 

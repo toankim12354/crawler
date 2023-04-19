@@ -5,12 +5,13 @@ namespace Toanlt\Crawler\Controllers;
 use Exception;
 use Toanlt\Crawler\Factories\ParserFactory;
 use Toanlt\Crawler\Models\Database;
+use Toanlt\Crawler\Models\DatabaseInterface;
 
 class CrawlerController extends BaseController
 {
-    private Database $database;
+    private DatabaseInterface $database;
 
-    public function __construct(Database $database)
+    public function __construct(DatabaseInterface $database)
     {
         $this->database = $database;
     }
@@ -26,7 +27,7 @@ class CrawlerController extends BaseController
             $data = $parser->parse();
 
             if ($data !== null) {
-                $inserted = $this->database->insert('posts', $data);
+                $inserted = $this->database->insert('wrapper', $data);
                 if ($inserted === false) {
                     echo "Insert to database failed";
                 } else {
@@ -41,6 +42,9 @@ class CrawlerController extends BaseController
         }
     }
 
+    /**
+     * @return void
+     */
     public function formCrawler(): void
     {
         $this->view('index.php');

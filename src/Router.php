@@ -20,6 +20,7 @@ class Router
         $this->routes[$method][$path] = $callback;
     }
 
+    //magic function
     public function __call(string $method, array $arguments)
     {
         $path = array_shift($arguments);
@@ -46,7 +47,7 @@ class Router
                 }
             }
         }
-        echo "404 Not Found";
+        include __DIR__ . '/../views/errors/404.php';
     }
 
     public function dispatch(): void

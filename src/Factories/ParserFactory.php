@@ -25,7 +25,7 @@ class ParserFactory
             str_contains($url, "vietnamnet.vn") => new VietnamnetParser(
                 $url,
                 'content-detail-title',
-                'maincontent main-content',
+                'maincontent',
                 'bread-crumb-detail__time'
             ),
             str_contains($url, "vnexpress.net") => new VnexpressParser(

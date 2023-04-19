@@ -6,7 +6,7 @@ use DOMDocument;
 use DOMNode;
 use DOMXPath;
 
-abstract class BaseParser implements ParserInterface
+abstract class  BaseParser implements ParserInterface
 {
     protected string $url;
     protected string $titleSelector;
