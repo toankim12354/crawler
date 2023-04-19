@@ -1,7 +1,9 @@
 <?php
 
 namespace Toanlt\Crawler\Services;
-
+/**
+ * @package Toanlt\Crawler\Services
+ */
 interface ParserInterface
 {
     /**

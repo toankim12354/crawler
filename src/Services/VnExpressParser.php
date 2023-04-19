@@ -1,7 +1,9 @@
 <?php
 
 namespace Toanlt\Crawler\Services;
-
+/**
+ * @package Toanlt\Crawler\Services
+ */
 class VnExpressParser extends BaseParser
 {
     /**

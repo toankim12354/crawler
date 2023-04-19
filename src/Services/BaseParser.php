@@ -6,6 +6,7 @@ use DOMDocument;
 use DOMNode;
 use DOMXPath;
 
+
 abstract class  BaseParser implements ParserInterface
 {
     protected string $url;
@@ -15,6 +16,12 @@ abstract class  BaseParser implements ParserInterface
     // get class date from dan tri
     protected string $dateSelector;
 
+    /**
+     * @param string $url
+     * @param string $titleSelector
+     * @param string $contentSelector
+     * @param string $dateSelector
+     */
     protected function __construct(string $url, string $titleSelector, string $contentSelector, string $dateSelector)
     {
         $this->url = $url;
@@ -23,8 +30,9 @@ abstract class  BaseParser implements ParserInterface
         $this->dateSelector = $dateSelector;
     }
 
+
     /**
-     * @inheritDoc
+     * @return array|null
      */
     public function parse(): ?array
     {

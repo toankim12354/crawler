@@ -15,6 +15,7 @@ class ParserFactory
      */
     public static function make(string $url): ParserInterface
     {
+        /** @var ParserInterface $parser */
         return match (true) {
             str_contains($url, "dantri.com.vn") => new DantriParser(
                 $url,

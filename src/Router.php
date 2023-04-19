@@ -4,10 +4,17 @@ namespace Toanlt\Crawler;
 
 class Router
 {
+
     public const REQUEST_METHOD_GET = 'get';
     public const REQUEST_METHOD_POST = 'post';
     private array $routes = [];
 
+    /**
+     * @param string $method
+     * @param string $path
+     * @param callable|array $callback
+     * @return void
+     */
     public function addRoute(string $method, string $path, callable|array $callback): void
     {
         // Check if the path contains a parameter
@@ -19,7 +26,11 @@ class Router
 
         $this->routes[$method][$path] = $callback;
     }
-
+    /**
+     * @param string $method
+     * @param array $arguments
+     * @return void
+     */
     //magic function
     public function __call(string $method, array $arguments)
     {
